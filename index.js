@@ -1,13 +1,13 @@
 const babelo = require('babel-core')
 
 const babelSync = (filepath) => {
-  let result = babelo.transformFileSync(filepath).code || ''
+  let result = babelo.transformFileSync(filepath,{presets:['react']}).code || ''
   return result
 }
 
 const babel = (filepath) => {
   return new Promise((resolve, reject) => {
-    babelo.transformFile(filepath, (err, result) => {
+    babelo.transformFile(filepath, {presets:['react']}, (err, result) => {
       if(err) {
         return reject(err)
       }

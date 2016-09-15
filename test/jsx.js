@@ -1,10 +1,11 @@
-import React from 'react'
+let React = require('react')
 
 export default React.createClass({
   render(){
-    return(
-      <h1>hello world</h1>
+    return (
+      <h1>hhh</h1>
     )
   }
 })
+
 
