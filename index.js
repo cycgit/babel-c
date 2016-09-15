@@ -11,13 +11,10 @@ const babel = (filepath) => {
       if(err) {
         return reject(err)
       }
-
       resolve(result.code)
     })
   })
 }
-
-babel('es6.js').then(data => console.log(data))
 
 module.exports.babelSync = babelSync
 module.exports.babel = babel
